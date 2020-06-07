@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Pff-FB-8Um" userLabel="Data Entry Unit">
-                                <rect key="frame" x="30.333333333333343" y="200" width="314.66666666666663" height="160"/>
+                                <rect key="frame" x="30" y="200" width="315" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ciy-fm-Yh6" userLabel="Вычисление">
                                         <rect key="frame" x="0.0" y="0.0" width="210" height="160"/>
@@ -53,25 +53,37 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nq0-GZ-AtI" userLabel="Оценки">
-                                        <rect key="frame" x="222.99999999999997" y="0.0" width="91.666666666666657" height="160"/>
+                                        <rect key="frame" x="223" y="0.0" width="92" height="160"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пятёрок" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MFM-Ez-Yg5">
-                                                <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="91.670000000000002" id="FYb-FW-0MW"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Четвёрок" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5S-l3-JjB">
-                                                <rect key="frame" x="0.0" y="42" width="91.666666666666671" height="34"/>
+                                                <rect key="frame" x="0.0" y="42" width="92" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="91.670000000000002" id="ZWR-CG-jrJ"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Троек" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSS-Cp-w7u">
-                                                <rect key="frame" x="0.0" y="84" width="91.666666666666671" height="34"/>
+                                                <rect key="frame" x="0.0" y="84" width="92" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="91.670000000000002" id="cX1-vZ-3nh"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Двоек" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDJ-ei-YCz">
-                                                <rect key="frame" x="0.0" y="126" width="91.666666666666671" height="34"/>
+                                                <rect key="frame" x="0.0" y="126" width="92" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="91.670000000000002" id="VNo-uS-M5P"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
