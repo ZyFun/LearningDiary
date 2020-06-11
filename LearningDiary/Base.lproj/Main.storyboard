@@ -27,7 +27,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ciy-fm-Yh6" userLabel="Вычисление">
                                         <rect key="frame" x="0.0" y="0.0" width="210" height="160"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppi-Yd-PMS">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppi-Yd-PMS">
                                                 <rect key="frame" x="0.0" y="0.0" width="210" height="76"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="210" id="8c6-Mx-uf5"/>
@@ -49,6 +49,9 @@
                                                 <state key="normal" title="Рассчитать">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DzB-jB-v4n"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -92,7 +95,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qpK-bq-qea" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FUw-a8-Gfd"/>
                             <constraint firstItem="qpK-bq-qea" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="icA-5Z-1Jz"/>
@@ -101,6 +104,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="fiveTF" destination="MFM-Ez-Yg5" id="wtP-2K-Sqw"/>
+                        <outlet property="fourTF" destination="k5S-l3-JjB" id="g6E-Ta-XuH"/>
+                        <outlet property="resoultLabel" destination="Ppi-Yd-PMS" id="XgD-Vm-7dK"/>
+                        <outlet property="threeTF" destination="wSS-Cp-w7u" id="olf-St-xoM"/>
+                        <outlet property="twoTF" destination="XDJ-ei-YCz" id="HC9-0Q-iWf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
