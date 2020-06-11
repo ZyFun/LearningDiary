@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var fiveTF: UITextField!
@@ -44,6 +45,10 @@ class ViewController: UIViewController {
         resoultLabel.text = NSString(format: "%.2f", totalMark) as String
     }
     
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 
 
     override func viewDidLoad() {
