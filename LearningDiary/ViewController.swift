@@ -20,14 +20,10 @@ class ViewController: UIViewController {
     
     @IBAction func calculationButton(_ sender: UIButton) {
         
-        let five = Int(fiveTF.text ?? "")
-        let fiveArray = Array(repeating: 5, count: five ?? 0)
-        let four = Int(fourTF.text ?? "")
-        let fourArray = Array(repeating: 4, count: four ?? 0)
-        let three = Int(threeTF.text ?? "")
-        let threeArray = Array(repeating: 3, count: three ?? 0)
-        let two = Int(twoTF.text ?? "")
-        let twoArray = Array(repeating: 2, count: two ?? 0)
+        let fiveArray = Array(repeating: 5, count: Int(fiveTF.text ?? "") ?? 0)
+        let fourArray = Array(repeating: 4, count: Int(fourTF.text ?? "") ?? 0)
+        let threeArray = Array(repeating: 3, count: Int(threeTF.text ?? "") ?? 0)
+        let twoArray = Array(repeating: 2, count: Int(twoTF.text ?? "") ?? 0)
         
         var arrayMark = [Int]()
         arrayMark.append(contentsOf: fiveArray)
@@ -35,14 +31,19 @@ class ViewController: UIViewController {
         arrayMark.append(contentsOf: threeArray)
         arrayMark.append(contentsOf: twoArray)
         
-        var mark = 0.00
+        var mark: Double = 0
         for i in arrayMark {
             mark += Double(i)
         }
         
-        let totalMark = (mark / Double(arrayMark.count))
+//        let empty = arrayMark.isEmpty
         
-        resoultLabel.text = NSString(format: "%.2f", totalMark) as String
+        if arrayMark.isEmpty == true {
+            resoultLabel.text = "Введите оценки"
+        } else {
+            let totalMark = (mark / Double(arrayMark.count))
+            resoultLabel.text = NSString(format: "%.2f", totalMark) as String
+        }
     }
     
     
