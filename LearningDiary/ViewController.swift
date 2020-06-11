@@ -42,7 +42,6 @@ class ViewController: UIViewController {
         let totalMark = (mark / Double(arrayMark.count))
         
         resoultLabel.text = NSString(format: "%.2f", totalMark) as String
-        print(arrayMark)
     }
     
 
