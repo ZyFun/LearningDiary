@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             resoultLabel.text = "Введите оценки"
         } else {
             let totalMark = (mark / Double(arrayMark.count))
-            resoultLabel.text = NSString(format: "%.2f", totalMark) as String
+            resoultLabel.text = String(round(totalMark * 100) / 100)
         }
     }
     
