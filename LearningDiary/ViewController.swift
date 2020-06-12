@@ -18,6 +18,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var resoultLabel: UILabel!
     
+    @IBAction func clearButton(_ sender: UIButton) {
+        fiveTF.text = ""
+        fourTF.text = ""
+        threeTF.text = ""
+        twoTF.text = ""
+    }
+    
     @IBAction func calculationButton(_ sender: UIButton) {
         
         //создаем массивы оценок
