@@ -36,8 +36,6 @@ class ViewController: UIViewController {
             mark += Double(i)
         }
         
-//        let empty = arrayMark.isEmpty
-        
         if arrayMark.isEmpty == true {
             resoultLabel.text = "Введите оценки"
         } else {
