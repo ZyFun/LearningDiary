@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var fiveTF: UITextField!
     @IBOutlet weak var fourTF: UITextField!
@@ -52,6 +52,32 @@ class ViewController: UIViewController {
     //скрываем клавиатуру по нажатию на любую область экрана, кроме редактируемой
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    //Функция для ограничения ввода символов в поля ввода (разобраться подробнее, как работает этот кусок кода)
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        let currentCharacterCount = textField.text?.count ?? 0
+
+        if (range.length + range.location > currentCharacterCount){
+            return false
+
+        }
+        let newLength = currentCharacterCount + string.count - range.length
+
+        var maxLength = 0
+        if textField.isEqual(fiveTF) {
+            maxLength = 3
+        } else if textField.isEqual(fourTF) {
+            maxLength = 3
+        } else if textField.isEqual(threeTF) {
+            maxLength = 3
+        } else if textField.isEqual(twoTF) {
+            maxLength = 3
+        }
+
+        return newLength <= maxLength
+
     }
 
 
