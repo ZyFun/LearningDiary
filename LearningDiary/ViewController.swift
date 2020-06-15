@@ -27,32 +27,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func calculationButton(_ sender: UIButton) {
         
-        //создаем массивы оценок
-        let fiveArray = Array(repeating: 5, count: Int(fiveTF.text ?? "") ?? 0)
-        let fourArray = Array(repeating: 4, count: Int(fourTF.text ?? "") ?? 0)
-        let threeArray = Array(repeating: 3, count: Int(threeTF.text ?? "") ?? 0)
-        let twoArray = Array(repeating: 2, count: Int(twoTF.text ?? "") ?? 0)
-        
-        //создаём общий массив и добавляем в него данные из массивов оценок
-        var arrayMark = [Int]()
-        arrayMark.append(contentsOf: fiveArray)
-        arrayMark.append(contentsOf: fourArray)
-        arrayMark.append(contentsOf: threeArray)
-        arrayMark.append(contentsOf: twoArray)
-        
-        //вычисляем общюю сумму массива
-        var mark: Double = 0
-        for i in arrayMark {
-            mark += Double(i)
-        }
-        
-        if arrayMark.isEmpty == true {
-            resoultLabel.text = "Введите оценки"
-        } else {
+        //Создаём константы для записи вычислений количества оценок
+        let countFive = Double(fiveTF.text ?? "") ?? 0
+        let five = 5 * countFive
+        let countFour = Double(fourTF.text ?? "") ?? 0
+        let four = 4 * countFour
+        let countThree = Double(threeTF.text ?? "") ?? 0
+        let three = 3 * countThree
+        let countTwo = Double(twoTF.text ?? "") ?? 0
+        let two = 2 * countTwo
+
+        //Считаем общую сумму всех чисел и количество оценок
+        let resoultMark = five + four + three + two
+        let countMark = countFive + countFour + countThree + countTwo
+
+        let bool = resoultMark > 0
+        switch bool {
+        case true:
             //вычисляем среднее значение оценок
-            let totalMark = (mark / Double(arrayMark.count))
+            let totalMark = (resoultMark / countMark)
             //округляем до Х.ХХ и выводим результат
             resoultLabel.text = String(round(totalMark * 100) / 100)
+        default:
+            resoultLabel.text = "Введите оценки"
         }
     }
     
