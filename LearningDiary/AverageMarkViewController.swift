@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class AverageMarkViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var fiveTF: UITextField!
     @IBOutlet weak var fourTF: UITextField!

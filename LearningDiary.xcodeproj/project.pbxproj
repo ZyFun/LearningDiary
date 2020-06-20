@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		2C118E6F248D739200249610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C118E6E248D739200249610 /* AppDelegate.swift */; };
 		2C118E71248D739200249610 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C118E70248D739200249610 /* SceneDelegate.swift */; };
-		2C118E73248D739200249610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C118E72248D739200249610 /* ViewController.swift */; };
+		2C118E73248D739200249610 /* AverageMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C118E72248D739200249610 /* AverageMarkViewController.swift */; };
 		2C118E76248D739200249610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C118E74248D739200249610 /* Main.storyboard */; };
 		2C118E78248D739400249610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C118E77248D739400249610 /* Assets.xcassets */; };
 		2C118E7B248D739400249610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C118E79248D739400249610 /* LaunchScreen.storyboard */; };
+		2C479629249E18F500D93B3A /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C479628249E18F500D93B3A /* DiaryTableViewController.swift */; };
+		2C47962B249E264000D93B3A /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47962A249E264000D93B3A /* DiaryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C118E6B248D739200249610 /* LearningDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C118E6E248D739200249610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C118E70248D739200249610 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C118E72248D739200249610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C118E72248D739200249610 /* AverageMarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageMarkViewController.swift; sourceTree = "<group>"; };
 		2C118E75248D739200249610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C118E77248D739400249610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C118E7A248D739400249610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C118E7C248D739400249610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C479628249E18F500D93B3A /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
+		2C47962A249E264000D93B3A /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				2C118E6E248D739200249610 /* AppDelegate.swift */,
 				2C118E70248D739200249610 /* SceneDelegate.swift */,
-				2C118E72248D739200249610 /* ViewController.swift */,
+				2C118E72248D739200249610 /* AverageMarkViewController.swift */,
+				2C479628249E18F500D93B3A /* DiaryTableViewController.swift */,
+				2C47962A249E264000D93B3A /* DiaryTableViewCell.swift */,
 				2C118E74248D739200249610 /* Main.storyboard */,
 				2C118E77248D739400249610 /* Assets.xcassets */,
 				2C118E79248D739400249610 /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C118E73248D739200249610 /* ViewController.swift in Sources */,
+				2C118E73248D739200249610 /* AverageMarkViewController.swift in Sources */,
+				2C47962B249E264000D93B3A /* DiaryTableViewCell.swift in Sources */,
+				2C479629249E18F500D93B3A /* DiaryTableViewController.swift in Sources */,
 				2C118E6F248D739200249610 /* AppDelegate.swift in Sources */,
 				2C118E71248D739200249610 /* SceneDelegate.swift in Sources */,
 			);
