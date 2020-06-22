@@ -27,8 +27,8 @@ class DiaryTableViewController: UITableViewController {
         //Имя заголовка
         self.title = "Журнал"
         
-        //Отображение кнопки редактирования с левой стороны
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+//        //Отображение кнопки редактирования с левой стороны
+//        self.navigationItem.leftBarButtonItem = self.editButtonItem
         
     }
 
@@ -86,22 +86,22 @@ class DiaryTableViewController: UITableViewController {
         }
     }
 
-    //метод логики перемещения ячеек
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
-        // Удаляем элемент из ячейки массива, присваивая удаленный объект константе
-        let movedMark = markModel.remove(at: sourceIndexPath.row)
-        // Вставляем удаленный объект на новое место
-        markModel.insert(movedMark, at: destinationIndexPath.row)
-        //перезагружаем таблицу для обновления данных
-        //tableView.reloadData()
-    }
+//    //метод логики перемещения ячеек (доступный только при включенном редактировании ячеек)
+//    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//
+//        // Удаляем элемент из ячейки массива, присваивая удаленный объект константе
+//        let movedMark = markModel.remove(at: sourceIndexPath.row)
+//        // Вставляем удаленный объект на новое место
+//        markModel.insert(movedMark, at: destinationIndexPath.row)
+//        //перезагружаем таблицу для обновления данных
+//        //tableView.reloadData()
+//    }
     
-    // Метод для включения возможности перемещения ячеек
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
+//    // Метод для включения возможности перемещения ячеек
+//    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//        // Return false if you do not want the item to be re-orderable.
+//        return true
+//    }
     
 
     /*
