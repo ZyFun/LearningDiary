@@ -24,5 +24,14 @@ class DiaryTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    //Создаём функцию для конфигурирования объектов в ячейке
+    func setMark(objectMark: Mark) {
+        
+        //Присваиваем данные отображаемой ячейке
+        self.mark.text = "\(objectMark.mark)"
+        self.courseName.text = objectMark.courseName
+        self.lessonName.text = objectMark.lessonName
+    }
 
 }

@@ -9,6 +9,10 @@
 import UIKit
 
 class DiaryTableViewController: UITableViewController {
+    
+    let markModel = [
+        Mark(mark: 5, courseName: "Основы программирования", lessonName: "Урок 19")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,8 @@ class DiaryTableViewController: UITableViewController {
     //Настройка количества ячеек в таблице
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        //отображаем то количество объектов, которое есть в массиве
+        return markModel.count
     }
 
     //Метод для вызова ячейки в таблицу
@@ -43,10 +48,12 @@ class DiaryTableViewController: UITableViewController {
         //Присваиваем константе ячейку и кастим её до типа DiaryTableViewCell
         let markDiaryCell = tableView.dequeueReusableCell(withIdentifier: "markCell", for: indexPath) as! DiaryTableViewCell
         
-        //Присваиваем данные отображаемой ячейке
-        markDiaryCell.mark.text = "3"
-        markDiaryCell.courseName.text = "Основы программирования"
-        markDiaryCell.lessonName.text = "Урок 12"
+        
+        //Создаэм константу, которая будет обращатся к конкретной строке ячейки массива
+        let objectsMark = markModel[indexPath.row]
+        
+        //Вызываем модель ячейки с данными
+        markDiaryCell.setMark(objectMark: objectsMark)
 
         return markDiaryCell
     }
