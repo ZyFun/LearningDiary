@@ -10,8 +10,10 @@ import UIKit
 
 class DiaryTableViewController: UITableViewController {
     
-    let markModel = [
-        Mark(mark: 5, courseName: "Основы программирования", lessonName: "Урок 19")
+    var markModel = [
+        Mark(mark: 5, courseName: "Основы программирования", lessonName: "Урок 17"),
+        Mark(mark: 3, courseName: "Основы программирования", lessonName: "Урок 18"),
+        Mark(mark: 4, courseName: "Основы программирования", lessonName: "Урок 19")
     ]
 
     override func viewDidLoad() {
@@ -24,7 +26,9 @@ class DiaryTableViewController: UITableViewController {
         
         //Имя заголовка
         self.title = "Журнал"
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //Отображение кнопки редактирования с левой стороны
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
         
     }
 
@@ -67,32 +71,38 @@ class DiaryTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
+//    //По умолчанию этот метод возвращает .delete. По этому прописывать его не обязательно
+//    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//        return .delete
+//    }
+    
+    // Метод для удаления данных из массива оценок курсов
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            // Удаляем данные из ячейки массива, с которой в данный момент взаимодействуем
+            markModel.remove(at: indexPath.row)
+            // Удаляем данные из таблицы
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    //метод логики перемещения ячеек
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        // Удаляем элемент из ячейки массива, присваивая удаленный объект константе
+        let movedMark = markModel.remove(at: sourceIndexPath.row)
+        // Вставляем удаленный объект на новое место
+        markModel.insert(movedMark, at: destinationIndexPath.row)
+        //перезагружаем таблицу для обновления данных
+        //tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
+    
+    // Метод для включения возможности перемещения ячеек
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
 
     /*
     // MARK: - Navigation
