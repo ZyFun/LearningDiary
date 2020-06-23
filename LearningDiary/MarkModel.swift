@@ -9,7 +9,7 @@
 import Foundation
 
 struct Mark {
-    var mark: Int
+    var mark: String
     var courseName: String
     var lessonName: String
 }

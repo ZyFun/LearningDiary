@@ -11,9 +11,9 @@ import UIKit
 class DiaryTableViewController: UITableViewController {
     
     var markModel = [
-        Mark(mark: 5, courseName: "Основы программирования", lessonName: "Урок 17"),
-        Mark(mark: 3, courseName: "Основы программирования", lessonName: "Урок 18"),
-        Mark(mark: 4, courseName: "Основы программирования", lessonName: "Урок 19")
+        Mark(mark: "5", courseName: "Основы программирования", lessonName: "Урок 17"),
+        Mark(mark: "3", courseName: "Основы программирования", lessonName: "Урок 18"),
+        Mark(mark: "4", courseName: "Основы программирования", lessonName: "Урок 19")
     ]
 
     override func viewDidLoad() {
@@ -30,6 +30,16 @@ class DiaryTableViewController: UITableViewController {
 //        //Отображение кнопки редактирования с левой стороны
 //        self.navigationItem.leftBarButtonItem = self.editButtonItem
         
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveButtonSegue" else { return }
+        let sourceVC = segue.source as! NewMarkTableViewController
+        let mark = sourceVC.mark
+        
+        let newIndexPath = IndexPath(row: markModel.count, section: 0)
+        markModel.append(mark)
+        tableView.insertRows(at: [newIndexPath], with: .fade)
     }
 
     // MARK: - Table view data source

@@ -16,6 +16,7 @@
 		2C479629249E18F500D93B3A /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C479628249E18F500D93B3A /* DiaryTableViewController.swift */; };
 		2C47962B249E264000D93B3A /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C47962A249E264000D93B3A /* DiaryTableViewCell.swift */; };
 		2C5463AF24A0BED500C11140 /* MarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5463AE24A0BED500C11140 /* MarkModel.swift */; };
+		2CE9E14224A21813001A565C /* NewMarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9E14124A21813001A565C /* NewMarkTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2C479628249E18F500D93B3A /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
 		2C47962A249E264000D93B3A /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 		2C5463AE24A0BED500C11140 /* MarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModel.swift; sourceTree = "<group>"; };
+		2CE9E14124A21813001A565C /* NewMarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMarkTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				2C5463AE24A0BED500C11140 /* MarkModel.swift */,
 				2C479628249E18F500D93B3A /* DiaryTableViewController.swift */,
 				2C47962A249E264000D93B3A /* DiaryTableViewCell.swift */,
+				2CE9E14124A21813001A565C /* NewMarkTableViewController.swift */,
 				2C118E74248D739200249610 /* Main.storyboard */,
 				2C118E77248D739400249610 /* Assets.xcassets */,
 				2C118E79248D739400249610 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				2C479629249E18F500D93B3A /* DiaryTableViewController.swift in Sources */,
 				2C118E6F248D739200249610 /* AppDelegate.swift in Sources */,
 				2C118E71248D739200249610 /* SceneDelegate.swift in Sources */,
+				2CE9E14224A21813001A565C /* NewMarkTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
