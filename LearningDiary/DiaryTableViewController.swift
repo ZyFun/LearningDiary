@@ -37,9 +37,27 @@ class DiaryTableViewController: UITableViewController {
         let sourceVC = segue.source as! NewMarkTableViewController
         let mark = sourceVC.mark
         
-        let newIndexPath = IndexPath(row: markModel.count, section: 0)
-        markModel.append(mark)
-        tableView.insertRows(at: [newIndexPath], with: .fade)
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            markModel[selectedIndexPath.row] = mark
+            tableView.reloadRows(at: [selectedIndexPath], with: .fade)
+        } else {
+            let newIndexPath = IndexPath(row: markModel.count, section: 0)
+                  markModel.append(mark)
+                  tableView.insertRows(at: [newIndexPath], with: .fade)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "editMark" else { return }
+        let indexPath = tableView.indexPathForSelectedRow!
+        let mark = markModel[indexPath.row]
+        let navigationVC = segue.destination as! UINavigationController
+        let newMarkVC = navigationVC.topViewController as! NewMarkTableViewController
+        newMarkVC.mark = mark
+        newMarkVC.title = "Редактирование"
+        
+        
     }
 
     // MARK: - Table view data source

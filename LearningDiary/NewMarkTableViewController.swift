@@ -29,6 +29,12 @@ class NewMarkTableViewController: UITableViewController {
         // Если строки не пустые, кнопка активна
         saveButton.isEnabled = !markText.isEmpty && !courseText.isEmpty && !lessonText.isEmpty
     }
+    
+    private func updateUI() {
+        markTFE.text = mark.mark
+        courseTFE.text = mark.courseName
+        lessonTFE.text = mark.lessonName
+    }
      
     @IBAction func textAdd(_ sender: Any) {
         // Активация недоступности кнопки сохранения
@@ -37,6 +43,7 @@ class NewMarkTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
         // Кнопка не доступна при загрузке экрана
         updateSaveButton()
     }
