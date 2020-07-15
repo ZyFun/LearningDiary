@@ -19,10 +19,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var resoultLabel: UILabel!
     
     @IBAction func clearButton(_ sender: UIButton) {
-        fiveTF.text = ""
-        fourTF.text = ""
-        threeTF.text = ""
-        twoTF.text = ""
+        fiveTF.text = nil
+        fourTF.text = nil
+        threeTF.text = nil
+        twoTF.text = nil
     }
     
     @IBAction func calculationButton(_ sender: UIButton) {
